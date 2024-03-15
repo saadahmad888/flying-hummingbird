@@ -1,0 +1,211 @@
+@import url("./variables.css");
+
+/* font-family: 'Plus Jakarta Sans', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+/* font-family: "Open Sans", sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+html{
+    overflow-x: hidden;
+}
+body {
+    font-family: "Open Sans", sans-serif;
+    position: relative;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    transition: 0.3s all ease;
+}
+
+
+
+/* =======================================================================
+    Meal Plan Section CSS
+========================================================================== */
+.meal-plan-sec{
+    background: linear-gradient(270deg, #20463B 0%, #266351 100%);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.meal-plan-slider-item{
+    text-align: center;
+    margin: 50px 0;
+}
+.meal-plan-slider-item a{
+    text-align: center;
+    display: block;
+    margin-bottom: 25px;
+}
+.meal-plan-slider-item a img{
+    width: 250px;
+    margin: 0 auto;
+    transition: 0.3s all ease;
+}
+.meal-plan-slider-item a img:hover{
+    filter: drop-shadow(0px 10px 6px rgba(255, 255, 255, 0.1));
+}
+.meal-plan-slider-item .text{
+    color: var(--white);
+    font-size: 18px;
+    font-weight: 500;
+    display: none;
+    transition: 0.5s all ease;
+    transform: translateX(-90px);
+}
+#meal-plan-slider .slick-slide{
+    opacity: 0.5;
+    transition: 0.3s all ease;
+}
+#meal-plan-slider .slick-center{
+    transform: scale(1.2);
+    opacity: 1;
+}
+#meal-plan-slider .slick-center .meal-plan-slider-item a img{
+    animation: rotate 10s linear infinite; /* Adjust duration as needed */
+}
+#meal-plan-slider .slick-center .meal-plan-slider-item .text{
+    display: block;
+    transform: translateX(0);
+    transition: 0.5s all ease;
+}
+#meal-plan-slider .slick-prev:before, 
+#meal-plan-slider .slick-next:before{
+    font-size: 30px;
+}
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.main-meal-slider-item{
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://static.diabetesfoodhub.org/system/thumbs/system/images/articles/by-the-plate-main-image_SFW_3368519878.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main-meal-slider-item .content-box{
+    /* position: absolute;
+    bottom: 50px;
+    right: 30px; */
+    width: 100%;
+    /* width: 50%; */
+}
+.main-meal-slider-item .content-box .title{
+    color: var(--white);
+    font-size: 35px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+.main-meal-slider-item .content-box .desc{
+    color: var(--white);
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+#main-meal-slider .owl-nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+#main-meal-slider .owl-nav button{
+    color: var(--white);
+    font-size: 30px;
+    padding: 0 50px;
+}
+#main-meal-slider .owl-nav button:hover{
+    background-color: transparent;
+    color: var(--white);
+}
+
+
+.fly {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    z-index: 9999;
+  }
+
+
+
+  
+.animate__animated.animate__bounceInUp,
+.animate__animated.animate__bounceInRight{
+    --animate-duration: 1s;
+}

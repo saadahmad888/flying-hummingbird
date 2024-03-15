@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Flying HummingBird Plugin</title>
+    <!-- Fav Icon -->
+    <link rel="shortcut icon" href="" type="image/x-icon">
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- Font Awesome Style-Sheet -->
+    <link rel="stylesheet" href="./assets/css/all.css">
+    <!-- Owl Carsoule -->
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- Smart Wizard -->
+    <link rel="stylesheet" href="assets/css/smart_wizard_all.min.css">
+    <!-- Slick -->
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/slick-theme.css">
+    <!-- Jquery Nice Select -->
+    <link rel="stylesheet" href="assets/css/nice-select.css">
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom Style-Sheet -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+</head>
+
+<body class="scrollbar animate__animated animate__zoomIn" id="style-2">
+    <div class="body-wrapper">
+        <section class="meal-plan-sec">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="">
+                            <div class="" id="meal-plan-slider">
+                                <div class="meal-plan-slider-item">
+                                    <a href="slider-page.html">
+                                        <img src="assets/images/loss-plan.png" alt="">
+                                    </a>
+                                    <p class="text">
+                                        Weight Loss Plan
+                                    </p>
+                                </div>
+                                <div class="meal-plan-slider-item">
+                                    <a href="slider-page.html">
+                                        <img src="assets/images/loss-plan.png" alt="">
+                                    </a>
+                                    <p class="text">
+                                        Weight Balanced Plan
+                                    </p>
+                                </div>
+                                <div class="meal-plan-slider-item">
+                                    <a href="slider-page.html">
+                                        <img src="assets/images/loss-plan.png" alt="">
+                                    </a>
+                                    <p class="text">
+                                        Weight Gain Plan
+                                    </p>
+                                </div>
+                                <div class="meal-plan-slider-item">
+                                    <a href="slider-page.html">
+                                        <img src="assets/images/loss-plan.png" alt="">
+                                    </a>
+                                    <p class="text">
+                                        Custom Plan
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- Jquery CDN -->
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <!-- Bootstrap CDN -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!-- Lord Icon -->
+    <script src="https://cdn.lordicon.com/lordicon.js"></script>
+    <!-- validate js -->
+    <script src="assets/js/jquery.validate.js"></script>
+    <!-- Smart Wizard -->
+    <script src="assets/js/jquery.smartWizard.min.js"></script>
+    <!-- Owl Carsoul -->
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <!-- Jquery Nice Select -->
+    <script src="assets/js/jquery.nice-select.js"></script>
+    <!-- Isotope JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
+    <!-- Slick -->
+    <script src="assets/js/slick.js"></script>
+    <!-- AOS Animation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Custom Script CSS -->
+    <script src="assets/js/script.js"></script>
+
+    <script>
+        $(document).ready(function () {
+                $('#meal-plan-slider').slick({
+                    infinite: true,
+                    centerMode: true,
+                    centerPadding: '60px',
+                    slidesToShow: 3,
+                    responsive: [
+                        {
+                            breakpoint: 768,
+                            settings: {
+                                infinite: true,
+                                arrows: true,
+                                centerMode: true,
+                                centerPadding: '40px',
+                                slidesToShow: 3,
+                            }
+                        },
+                        {
+                            breakpoint: 480,
+                            settings: {
+                                infinite: true,
+                                arrows: false,
+                                centerMode: true,
+                                centerPadding: '40px',
+                                slidesToShow: 1
+                            }
+                        }
+                    ]
+                });
+            });
+
+    </script>
+    
+    <script>
+        // $('#service-slider').owlCarousel({
+        //     loop: true,
+        //     margin: 10,
+        //     nav: true,
+        //     autoplay:false,
+        //     autoplayTimeout:1000,
+        //     autoplayHoverPause:true,
+        //     animateOut: 'fadeOut',
+        //     nav: false,
+        //     responsive: {
+        //         0: {
+        //             items: 1
+        //         },
+        //         600: {
+        //             items: 2
+        //         },
+        //         1000: {
+        //             items: 4,
+        //         }
+        //     }
+        // });
+        
+        // $('#insta-slider').owlCarousel({
+        //     loop: true,
+        //     margin: 10,
+        //     nav: true,
+        //     autoplay:true,
+        //     autoplayTimeout:1000,
+        //     autoplayHoverPause:true,
+        //     animateOut: 'fadeOut',
+        //     nav: false,
+        //     dots: false,
+        //     responsive: {
+        //         0: {
+        //             items: 2
+        //         },
+        //         600: {
+        //             items: 3
+        //         },
+        //         1000: {
+        //             items: 6
+        //         }
+        //     }
+        // });
+    </script>
+    
+    
+</body>
+
+</html>
