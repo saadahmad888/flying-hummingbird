@@ -139,7 +139,9 @@ a {
 
 
 
-
+#main-meal-sec{
+    background: transparent;
+}
 .main-meal-slider-item{
     min-height: 100vh;
     background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://static.diabetesfoodhub.org/system/thumbs/system/images/articles/by-the-plate-main-image_SFW_3368519878.jpg');
@@ -151,6 +153,9 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.main-meal-slider-item.one{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://media.istockphoto.com/id/1191080960/photo/traditional-turkish-breakfast-and-people-taking-various-food-wide-composition.webp?b=1&s=170667a&w=0&k=20&c=TfDWzyTUXbxt3bH8IvPDUnagLppqFAzMqtEWq-558O8=');
 }
 .main-meal-slider-item .content-box{
     /* position: absolute;
@@ -193,19 +198,19 @@ a {
 }
 
 
-.fly {
+/* .fly {
     width: 350px;
     height: 350px;
     object-fit: cover;
     transform: translate(-50%, -50%);
     position: absolute;
     z-index: 9999;
-  }
+  } */
 
 
 
   
 .animate__animated.animate__bounceInUp,
 .animate__animated.animate__bounceInRight{
-    --animate-duration: 1s;
+    --animate-duration: 2s;
 }

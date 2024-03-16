@@ -1,316 +1,84 @@
-/* =======================================================================
-Sticky Nav
-========================================================================== */
-window.addEventListener('scroll', function() {
-  myFunction();
-});
+$(document).ready(function() {
+  var owl = $('#main-meal-slider');
+  owl.owlCarousel({
+      loop: true,
+      margin: 0,
+      nav: true,
+      autoplay: false,
+      autoplayTimeout: 1000,
+      autoplayHoverPause: true,
+      animateOut: 'fadeOut',
+      dots: false,
+      navText: ['<i class="fal fa-long-arrow-left"></i>', '<i class="fal fa-long-arrow-right"></i>'],
+      responsive: {
+          0: {
+              items: 1
+          },
+          600: {
+              items: 1
+          },
+          1000: {
+              items: 1,
+          }
+      }
+  });
 
-var navbar = document.getElementById("main-nav");
-
-function myFunction() {
-  if (window.scrollY >= 100) {
-    navbar.classList.add("colored");
-  } else {
-    navbar.classList.remove("colored");
-  }
-}
-
-
-
-
-
-// Show the preloader
-function showPreloader() {
-  document.getElementById('loader').style.display = 'flex';
-
-  // Delay hiding the preloader by 2 seconds
-  setTimeout(hidePreloader, 2000);
-}
-
-// Hide the preloader
-function hidePreloader() {
-  document.getElementById('loader').style.display = 'none';
-}
-
-// Call showPreloader function to show the preloader for at least 2 seconds
-showPreloader();
-
-
-
-
-
-
-(function () {
-  'use strict';
-  window.addEventListener('load', function () {
-    // Get the forms we want to add validation styles to
-    var forms = document.getElementsByClassName('needs-validation');
-    // Loop over them and prevent submission
-    var validation = Array.prototype.filter.call(forms, function (form) {
-      form.addEventListener('submit', function (event) {
-        if (form.checkValidity() === false) {
-          event.preventDefault();
-          event.stopPropagation();
-        }
-        form.classList.add('was-validated');
-      }, false);
-    });
-  }, false);
-})();
-
-
-// $('#meal-slider').owlCarousel({
-//   loop:true,
-//   margin:10,
-//   nav:false,
-//   dots: true,
-//   responsive:{
-//       0:{
-//           items:1
-//       },
-//       600:{
-//           items:2
-//       },
-//       1000:{
-//           items:3
-//       }
-//     }
-// })
-
-// $('#plan-slider').owlCarousel({
-//   loop: true,
-//   margin: 10,
-//   responsive: {
-//     0: {
-//       items: 1,
-//       dots: true,
-//       nav: false,
-//     },
-//     600: {
-//       items: 2,
-//       dots: true,
-//       nav: false,
-//     },
-//     1000: {
-//       items: 3,
-//       dots: false,
-//       nav: true,
-//     }
-//   }
-// })
-
-// $('#more-slider').owlCarousel({
-//   loop: true,
-//   margin: 10,
-//   nav:false,
-//   responsive: {
-//     0: {
-//       items: 1,
-//       dots: true,
-//       nav: false,
-//     },
-//     600: {
-//       items: 1,
-//       dots: true,
-//       nav: false,
-//     },
-//     1000: {
-//       items: 1,
-//       dots: false,
-//       nav: true,
-//     }
-//   }
-// })
-
-// $('#shop-slider').owlCarousel({
-//   loop: true,
-//   margin: 10,
-//   responsive: {
-//     0: {
-//       items: 1,
-//       dots: true,
-//       nav: false,
-//     },
-//     600: {
-//       items: 2,
-//       dots: true,
-//       nav: false,
-//     },
-//     1000: {
-//       items: 4,
-//       dots: false,
-//       nav: true,
-//     }
-//   }
-// })
-
-// $('#testimonial-slider').owlCarousel({
-//   loop: true,
-//   margin: 10,
-//   responsive: {
-//     0: {
-//       items: 1,
-//       dots: true,
-//       nav: false,
-//     },
-//     600: {
-//       items: 1,
-//       dots: true,
-//       nav: false,
-//     },
-//     1000: {
-//       items: 2,
-//       dots: false,
-//       nav: true,
-//     }
-//   }
-// });
-
-
-// $('#detail-meal-slider').owlCarousel({
-//   loop: true,
-//   margin: 10,
-//   nav: false,
-//   dots: true,
-//   autoplay:true,
-//   autoplayTimeout:4000,
-//   autoplayHoverPause:true,
-//   responsive: {
-//     0: {
-//       items: 1,
-//     },
-//     600: {
-//       items: 1,
-//     },
-//     1000: {
-//       items: 1,
-//     }
-//   }
-// });
-
-// $('#transformation-slider').owlCarousel({
-//   loop: true,
-//   margin: 10,
-//   nav: false,
-//   dots: true,
-//   autoplay:true,
-//   autoplayTimeout:4000,
-//   autoplayHoverPause:true,
-//   responsive: {
-//     0: {
-//       items: 1,
-//     },
-//     600: {
-//       items: 2,
-//     },
-//     1000: {
-//       items: 4,
-//     }
-//   }
-// });
-
-
-// $('#trainer-slider').owlCarousel({
-//   loop: true,
-//   margin: 10,
-//   nav: false,
-//   dots: true,
-//   autoplay:true,
-//   autoplayTimeout:4000,
-//   autoplayHoverPause:true,
-//   responsive: {
-//     0: {
-//       items: 1,
-//     },
-//     600: {
-//       items: 2,
-//     },
-//     1000: {
-//       items: 4,
-//     }
-//   }
-// });
-
-// $('#shop-now-slider').owlCarousel({
-//   loop: true,
-//   margin: 10,
-//   nav: false,
-//   dots: true,
-//   autoplay:true,
-//   autoplayTimeout:4000,
-//   autoplayHoverPause:true,
-//   responsive: {
-//     0: {
-//       items: 1,
-//     },
-//     600: {
-//       items: 2,
-//     },
-//     1000: {
-//       items: 4,
-//     }
-//   }
-// });
-
-// $('#quick-view-slider').owlCarousel({
-//   loop: true,
-//   margin: 10,
-//   nav: false,
-//   dots: true,
-//   autoplay:true,
-//   autoplayTimeout:4000,
-//   autoplayHoverPause:true,
-//   responsive: {
-//     0: {
-//       items: 1,
-//     },
-//     600: {
-//       items: 1,
-//     },
-//     1000: {
-//       items: 1,
-//     }
-//   }
-// });
-
-// Initialize Isotope for filtering
-var $portfolio = $('.portfolio').isotope({
-  itemSelector: '.item',
-  layoutMode: 'fitRows'
-});
-
-// Filtering function
-$('.filter-button-group').on('click', 'button', function() {
-  var filterValue = $(this).attr('data-filter');
-  $portfolio.isotope({ filter: filterValue });
-});
-
-// Change is-checked class on buttons
-$('.filter-button-group').each(function(i, buttonGroup) {
-  var $buttonGroup = $(buttonGroup);
-  $buttonGroup.on('click', 'button', function() {
-    $buttonGroup.find('.is-checked').removeClass('is-checked');
-    $(this).addClass('is-checked');
+  $('#main-meal-slider').on('translate.owl.carousel', function(e) {
+    var index = e.item.index;
+    $('.content-box').removeClass('animate__animated animate__bounceInRight');
+    $('.content-box').eq(index).addClass('animate__animated animate__bounceInRight');
+    $('.img-box').removeClass('animate__animated animate__bounceInUp');
+    $('.img-box').eq(index).addClass('animate__animated animate__bounceInUp');
   });
 });
 
 
+// $(document).ready(function(){
+//   var owl = $('#main-meal-slider');
+//   var currentSlideIndex = 0;
 
+//   owl.owlCarousel({
+//       loop: true,
+//       margin: 0,
+//       nav: true,
+//       autoplay: false,
+//       autoplayTimeout: 1000,
+//       autoplayHoverPause: true,
+//       animateOut: 'fadeOut',
+//       dots: false,
+//       navText: ['<i class="fal fa-long-arrow-left"></i>', '<i class="fal fa-long-arrow-right"></i>'],
+//       responsive: {
+//           0: {
+//               items: 1
+//           },
+//           600: {
+//               items: 1
+//           },
+//           1000: {
+//               items: 1,
+//           }
+//       }
+//   });
 
-// Website Popup
+//   owl.on('changed.owl.carousel', function(event) {
+//       var currentSlide = event.item.index;
+//       resetAnimations();
+//       applyAnimations(currentSlide);
+//   });
 
-// Function to open the popup after 2 seconds
-function openPopup() {
-  setTimeout(function () {
-      document.getElementById('popup-container').style.display = 'flex';
-  }, 1000); // 2000 milliseconds = 2 seconds
-}
+//   function applyAnimations(slideIndex) {
+//       // Reset animations
+//       $('[id^="imageBox"]').removeClass('animate__animated animate__bounceInUp');
+//       $('[id^="contentBox"]').removeClass('animate__animated animate__bounceInRight');
+      
+//       // Apply animations based on slide index
+//       $('#imageBox' + (slideIndex + 1)).addClass('animate__animated animate__bounceInUp');
+//       $('#contentBox' + (slideIndex + 1)).addClass('animate__animated animate__bounceInRight');
+//   }
 
-// Function to close the popup
-function closePopup() {
-  document.getElementById('popup-container').style.display = 'none';
-}
-
-// Open the popup when the page is loaded
-window.onload = openPopup;
-
+//   function resetAnimations() {
+//       // Remove all animation classes
+//       $('[id^="imageBox"]').removeClass('animate__animated animate__bounceInUp');
+//       $('[id^="contentBox"]').removeClass('animate__animated animate__bounceInRight');
+//   }
+// });
